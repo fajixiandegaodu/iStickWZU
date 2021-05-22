@@ -1,0 +1,26 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        //声明使用的Maven仓库
+        jcenter()
+        maven{ url "https://maven.google.com"}
+    }
+    dependencies {
+        // 依赖android提供的2.1.0-alpha5的gradle build
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+// 清楚工程的任务
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
